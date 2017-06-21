@@ -20,5 +20,24 @@
 .input{
     height: 100px;
     width: 400px;
+   border-radius: 5px;
+    font-family: Lobster;
+}
+.button{
+    border-radius: 7px;
+    font-family: Lobster;
+    background-color :#42a1f4;
+    border-color: #42a1f4
+}
+.img-box{
+    background-color:white;
+    border-radius: 6px;
+    display: block;
+    font-family: Lobster;
+    height: 200px;
+    width: 400px;
+    position: relative;
+    left: 35%;
+    text-align: center;
 
 }
