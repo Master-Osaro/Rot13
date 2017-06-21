@@ -17,9 +17,24 @@ let rot13_map = (arg) =>{
  return arr2.join(""); 
 }
 $(document).ready(function(){
+	$('.img-box').hide();
+     $('.button').mouseenter(function(){
+         $('.button').height('60px');
+         $('.button').width('105px');
+         $('.button').css("background-color","#42a1f4");
+        });
+    $('.button').mouseleave(function(){
+        $('.button').height('55px');
+         $('.button').width('100px');
+         $('.button').css("background-color","#42a1f4");
+        });
     $('.button').click(function (){
+	    $('.img-box').fadeIn(1000);
         var toAdd = $('input[name=myInput]').val();
 		var sentence = rot13_map(toAdd);
 		$("#answer").html(sentence);   
         });
+	$('.input').on('click', function(){
+            $('.img-box').fadeOut(1000);
+        })
     });
