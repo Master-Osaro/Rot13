@@ -34,6 +34,16 @@ $(document).ready(function(){
 		var sentence = rot13_map(toAdd);
 		$("#answer").html(sentence);   
         });
+	
+	$(document).keydown(function (key) {//enter key support
+        switch(parseInt(key.which,10)){
+            case 13:
+               $('.img-box').fadeIn(1000);
+              let toAdd = $('input[name=myInput]').val();
+              let sentence = rot13_map(toAdd);
+              $("#answer").html(sentence);
+              break;
+        }
 	$('.input').on('click', function(){
             $('.img-box').fadeOut(1000);
         })
