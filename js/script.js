@@ -17,33 +17,33 @@ let rot13_map = (arg) =>{
  return arr2.join(""); 
 }
 $(document).ready(function(){
-	$('.img-box').hide();
+     $('.img-box').hide();
      $('.button').mouseenter(function(){
          $('.button').height('60px');
          $('.button').width('105px');
          $('.button').css("background-color","#42a1f4");
         });
     $('.button').mouseleave(function(){
-        $('.button').height('55px');
+         $('.button').height('55px');
          $('.button').width('100px');
          $('.button').css("background-color","#42a1f4");
         });
     $('.button').click(function (){
-	    $('.img-box').fadeIn(1000);
-        var toAdd = $('input[name=myInput]').val();
-		var sentence = rot13_map(toAdd);
-		$("#answer").html(sentence);   
-        });
-	
-	$(document).keydown(function (key) {//enter key support
+	  $('.img-box').fadeIn(1000);
+          let toAdd = $('input[name=myInput]').val();
+	  let sentence = rot13_map(toAdd);
+	   $("#answer").html(sentence);   
+        });	
+     $(document).keydown(function (key) {//enter key support
         switch(parseInt(key.which,10)){
             case 13:
                $('.img-box').fadeIn(1000);
-              let toAdd = $('input[name=myInput]').val();
-              let sentence = rot13_map(toAdd);
-              $("#answer").html(sentence);
-              break;
+               let toAdd = $('input[name=myInput]').val();
+               let sentence = rot13_map(toAdd);
+               $("#answer").html(sentence);
+               break;
         }
+     });
 	$('.input').on('click', function(){
             $('.img-box').fadeOut(1000);
         })
